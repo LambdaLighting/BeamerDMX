@@ -1,0 +1,12 @@
+# Config file for ola_trigger tool, which will call the send.py script
+# to send new DMX data to the info-beamer presentation.
+#
+# https://wiki.openlighting.org/index.php/OLA_DMX_Trigger
+# ola_trigger -u 0 ola_trigger_config
+#
+# <Channel> TAB <Values/ Range/ All> TAB `<Command>`
+
+1 % `python3 send.py "red" "${slot_value}"`
+2 % `python3 send.py "green" "${slot_value}"`
+3 % `python3 send.py "blue" "${slot_value}"`
+4 % `python3 send_mode.py "${slot_value}"`
